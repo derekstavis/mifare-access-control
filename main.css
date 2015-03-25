@@ -1,0 +1,12 @@
+GtkBox > GtkLabel {
+    font-weight: bold;
+}
+
+GtkHBox {
+    border: 1px solid gray;
+    background-color: white;
+}
+
+GtkHBox GtkVBox {
+    margin: 10px;
+}
