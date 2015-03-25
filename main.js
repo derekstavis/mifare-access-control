@@ -493,7 +493,11 @@ const MifareAccessControl = new Lang.Class({
         }
 
         var text = calculate(blocks_access_bits).map(function (e) {
-            return e.toString(16);
+            var hex = e.toString(16);
+            if (hex.length < 2) {
+                hex = "0" + hex;
+            }
+            return hex;
         }).join(" ").toUpperCase();
 
         this._label_result.set_label(text);
