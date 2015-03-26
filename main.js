@@ -269,15 +269,15 @@ const MifareAccessControl = new Lang.Class({
                         title: "Write Key A",
                         options: [
                             {
+                                title: "Never",
+                                widget: undefined
+                            },
+                            {
                                 title: "Key A",
                                 widget: undefined
                             },
                             {
                                 title: "Key B",
-                                widget: undefined
-                            },
-                            {
-                                title: "Never",
                                 widget: undefined
                             }
                         ]
@@ -299,15 +299,15 @@ const MifareAccessControl = new Lang.Class({
                         title: "Write Access Bits",
                         options: [
                             {
+                                title: "Never",
+                                widget: undefined
+                            },
+                            {
                                 title: "Key A",
                                 widget: undefined
                             },
                             {
                                 title: "Key B",
-                                widget: undefined
-                            },
-                            {
-                                title: "Never",
                                 widget: undefined
                             }
                         ]
@@ -316,11 +316,11 @@ const MifareAccessControl = new Lang.Class({
                         title: "Read Key B",
                         options: [
                             {
-                                title: "Key A",
+                                title: "Never",
                                 widget: undefined
                             },
                             {
-                                title: "Never",
+                                title: "Key A",
                                 widget: undefined
                             }
                         ]
@@ -329,15 +329,15 @@ const MifareAccessControl = new Lang.Class({
                         title: "Write Key B",
                         options: [
                             {
+                                title: "Never",
+                                widget: undefined
+                            },
+                            {
                                 title: "Key A",
                                 widget: undefined
                             },
                             {
                                 title: "Key B",
-                                widget: undefined
-                            },
-                            {
-                                title: "Never",
                                 widget: undefined
                             }
                         ]
@@ -438,14 +438,14 @@ const MifareAccessControl = new Lang.Class({
                 if (is_same([1, 2, 2, 2], sector_action_map)) return [1, 0, 1];
                 if (is_same([2, 2, 2, 2], sector_action_map)) return [1, 1, 1];
             } else if (index == 3) {
-                if (is_same([0, 0, 1, 2, 0, 0], sector_action_map)) return [0, 0, 0];
-                if (is_same([0, 2, 1, 2, 0, 2], sector_action_map)) return [0, 1, 0];
-                if (is_same([0, 1, 0, 2, 1, 1], sector_action_map)) return [1, 0, 0];
-                if (is_same([0, 2, 0, 2, 1, 2], sector_action_map)) return [1, 1, 0];
-                if (is_same([0, 0, 1, 0, 0, 0], sector_action_map)) return [0, 0, 1];
-                if (is_same([0, 1, 0, 1, 1, 1], sector_action_map)) return [0, 1, 1];
-                if (is_same([0, 2, 0, 1, 1, 2], sector_action_map)) return [1, 0, 1];
-                if (is_same([0, 2, 0, 2, 1, 2], sector_action_map)) return [1, 1, 1];
+                if (is_same([0, 1, 1, 0, 1, 1], sector_action_map)) return [0, 0, 0];
+                if (is_same([0, 0, 1, 0, 1, 0], sector_action_map)) return [0, 1, 0];
+                if (is_same([0, 2, 0, 0, 0, 2], sector_action_map)) return [1, 0, 0];
+                if (is_same([0, 0, 0, 0, 0, 0], sector_action_map)) return [1, 1, 0];
+                if (is_same([0, 1, 1, 1, 1, 1], sector_action_map)) return [0, 0, 1];
+                if (is_same([0, 2, 0, 2, 0, 2], sector_action_map)) return [0, 1, 1];
+                if (is_same([0, 0, 0, 2, 0, 0], sector_action_map)) return [1, 0, 1];
+                if (is_same([0, 0, 0, 0, 0, 0], sector_action_map)) return [1, 1, 1];
             }
 
             return false;
